@@ -1,0 +1,10 @@
+pip install django - установка django
+django-admin startproject config - создание проекта
+cd config переход в папку установленную
+python manage.py startapp shop - создание приложения
+
+python manage.py makemigrations - подготовка к миграции
+python manage.py migrate - миграция в БД
+
+python manage.py createsuperuser - создаем пользователя с правами админа
+python manage.py runserver  - запуск сервера (проекта)

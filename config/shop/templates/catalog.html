@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Каталог{% endblock %}
+{% block content %}
+
+        <div class="popular_products">
+            {% for product in products %}
+            <div class="popular_product_item">
+                <p>
+                    <img src="/media/{{product.image}}" alt="">
+                </p>
+                <p class="title">
+                    {{product.name}}
+                </p>
+                <p>
+                    {{product.description}}
+                </p>
+                <p>
+                    {{product.price}} руб.
+                </p>
+                <p>
+                    <a href="#" class="btn">В корзину</a>
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+
+{% endblock %}
