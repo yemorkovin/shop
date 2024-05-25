@@ -58,12 +58,19 @@
     background-color: green;
     color: #fff;
     padding: 10px 20px;
-    width: 70px;
+    width: 120px;
     text-decoration: none;
+    cursor: pointer;
+    border: none
 }
 .btn:hover{
     background-color: chartreuse;
 }
 .title{
     font-weight: bolder;
+}
+.form_block{
+    display: flex;
+    width: 900px;
+    margin: 10px auto
 }

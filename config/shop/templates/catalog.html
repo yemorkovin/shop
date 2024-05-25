@@ -18,7 +18,11 @@
                     {{product.price}} руб.
                 </p>
                 <p>
-                    <a href="#" class="btn">В корзину</a>
+                    <form action="/addcart" method="post">
+                        {% csrf_token %}
+                        <input type="hidden" name="product" value="{{product.id}}">
+                        <button class="btn">В корзину</button>
+                    </form>
                 </p>
             </div>
             {% endfor %}

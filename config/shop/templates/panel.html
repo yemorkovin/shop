@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %}Продажа смртфонов{% endblock %}
+{% block content %}
+    <div class="form_block">
+        {% if 'user' in request.session %}
+            <div>
+                <p align="center">Добро пожаловать в личную панель, {{request.session.user}}</p>
+                <p>Ваш баланс: {{current_user.balance}} руб.</p>
+                <p><a href="/logout">Выход</a></p>
+            </div>
+        {% else %}
+      <div>
+          {% if suc %}
+          <p align="center">Вы успешно зарегистрированы!</p>
+          {% endif %}
+        <form action="/reg_post" method="post">
+          {% csrf_token %}
+          {{form_reg.as_p}}
+          <button>Регистрация</button>
+        </form>
+      </div>
+       <div>
+        <form action="/auth_post" method="post">
+          {% csrf_token %}
+          {{form_auth.as_p}}
+          <button>Авторизация</button>
+        </form>
+      </div>
+        {% endif %}
+    </div>
+{% endblock %}
