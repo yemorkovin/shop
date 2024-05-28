@@ -66,3 +66,11 @@ def addcart(request):
         else:
             request.session['cart'] = id_product
     return redirect('/catalog')
+
+
+def cart(request):
+    if 'cart' in request.session:
+        print(request.session['cart'])
+        '1,1' #[1,1]
+
+    return render(request, 'cart.html')

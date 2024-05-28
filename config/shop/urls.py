@@ -8,5 +8,6 @@ urlpatterns = [
     path('reg_post', reg_post),
     path('auth_post', auth_post),
     path('logout', logout),
-    path('addcart', addcart)
+    path('addcart', addcart),
+    path('cart', cart)
 ]

@@ -8,3 +8,12 @@ python manage.py migrate - миграция в БД
 
 python manage.py createsuperuser - создаем пользователя с правами админа
 python manage.py runserver  - запуск сервера (проекта)
+
+Создание страницы
+1. Создаем маршрут в urls.py (shop) path('cart', cart)
+2. Создаем ф-цию cart в views.py def cart(request)
+3. Создаем шаблон в папке templates cart.html
+
+ДЗ
+1. Сгенирировать список из 100 элементов случаным значениями из диапазона от 1 до 50
+2. Найти сумму этих эл-тов, макс, мин элементы
