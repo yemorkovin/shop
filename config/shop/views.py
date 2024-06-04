@@ -70,7 +70,11 @@ def addcart(request):
 
 def cart(request):
     if 'cart' in request.session:
-        print(request.session['cart'])
-        '1,1' #[1,1]
+        carts_id = request.session['cart'].split(',')
+        products_new = []
+        for i in carts_id:
+            product = Product.objects.filter(id=int(i))
+            products_new.append(product)
 
-    return render(request, 'cart.html')
+
+    return render(request, 'cart.html', {'products_new': products_new})

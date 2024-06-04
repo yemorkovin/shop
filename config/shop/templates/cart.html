@@ -1,5 +1,9 @@
 {% extends 'base.html' %}
 {% block title %}Корзина{% endblock %}
 {% block content %}
-
+<ul>
+    {% for product in products_new %}
+        <li>{{product.name}} {{product.price}} руб.</li>
+    {% endfor %}
+</ul>
 {% endblock %}
